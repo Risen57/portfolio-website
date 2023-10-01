@@ -7,10 +7,7 @@
     {# FONTS #}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,400;1,100;1,200&family=JetBrains+Mono&family=Pacifico&display=swap" rel="stylesheet">
 
     <title>It's Me Risen</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -25,20 +22,20 @@
 <body class="bg-[#040C1A]">
     <nav class="sticky top-0 h-12 mx-14 bg-[#040C1A] flex justify-center border-b border-[#99FFD6]">
         <ul class="px-10 pt-3 flex justify-center">
-            <li class="cursor-pointer mx-3 text-[#99FFD6] font-semibold text-xl font-['JetBrains Mono'] mb-2 hover:border-b-2 border-[#A2EE7F] hover:text-[#A2EE7F]"><a href="#intro">Home</a></li>
-            <li class="cursor-pointer mx-3 text-[#99FFD6] font-semibold text-xl font-['JetBrains Mono'] mb-2 hover:border-b-2 border-[#A2EE7F] hover:text-[#A2EE7F]"><a href="#projs">Projects</a></li>
-            <li class="cursor-pointer mx-3 text-[#99FFD6] font-semibold text-xl font-['JetBrains Mono'] mb-2 hover:border-b-2 border-[#A2EE7F] hover:text-[#A2EE7F]"><a href="#blogs">Blogs</a></li>
+            <li class="cursor-pointer mx-3 text-[#99FFD6] font-mono text-xl font-['IBM Plex Mono', 'monospace'] mb-2 hover:border-b border-[#A2EE7F] hover:text-[#A2EE7F]"><a href="#intro">Home</a></li>
+            <li class="cursor-pointer mx-3 text-[#99FFD6] font-mono text-xl font-['IBM Plex Mono', 'monospace'] mb-2 hover:border-b border-[#A2EE7F] hover:text-[#A2EE7F]"><a href="#projs">Projects</a></li>
+            <li class="cursor-pointer mx-3 text-[#99FFD6] font-mono text-xl font-['IBM Plex Mono', 'monospace'] mb-2 hover:border-b border-[#A2EE7F] hover:text-[#A2EE7F]"><a href="#blogs">Blogs</a></li>
         </ul>
     </nav>
 
     <div class="mt-10 pb-8 mx-14 border-b border-[#99FFD6]" id="intro">
         <img src="/static/p1.jpg" alt="prof-pic" class="rounded-full mx-auto">
-        <h1 class="text-center mt-10 font-medium font-['JetBrains Mono'] text-4xl text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-sky-400">> Hey There! I am Risen,</h1>
-        <p id="cont" class="mx-80 text-left font-medium text-2xl font-['Pacifico'] text-[#A2EE7F]"><span class="underline decoration-[#CA3C25] decoration-2">full stack web dev</span>, based in India, aged 15. Currenly learning <span class="underline decoration-[#CA3C25] decoration-2">python</span> and working on various projects.</p>
+        <h1 class="text-center mt-10 font-medium pb-4 font-['Pacifico'] text-4xl text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-yellow-500">> Hey There! I am Risen,</h1>
+        <p id="cont" class="mx-80 text-left font-mono text-xl font-['IBM Plex Mono'] text-[#A2EE7F]"><span class="underline decoration-[#FF6A5D] decoration-2">Full stack web dev</span>, based in India, aged 15. Currenly learning <span class="underline decoration-[#FF6A5D] decoration-2">python</span> and working on various projects.</p>
     </div>
 
     <div id="projs"class="border-b mx-14 border-[#99FFD6] pt-10">
-        <h1 class="text-center font-medium font-['JetBrains Mono'] text-4xl text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-yellow-500 pb-2">> Projects</h1>
+        <h1 class="text-center font-medium font-['Pacifico'] text-4xl text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-yellow-500 pb-4">> Projects</h1>
         <div id="projcon" class="flex flex-wrap w-full gap-4 p-10">
             {% for repo in projects %}
                 <a href="https://github.com/Risen57/{{repo}}" class="w-auto mx-auto">
@@ -48,11 +45,11 @@
         </div>
     </div>
 
-    <div id="#blogs" class="w-7/12 flex flex-col mt-10 mx-auto">
-        <h1 class="text-4xl pb-2 font-[JetBrains Mono] text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-yellow-500">Blogs</h1>
+    <div id="#blogs" class="w-6/12 flex flex-col my-10 mx-auto">
+        <h1 class="text-4xl pb-4 font-['Pacifico'] text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-yellow-500">Blogs</h1>
         {% for blog in blogs %}
-            <div class="py-2">
-                <h2 class="inline text-2xl font-light font-['Pacifico'] w-auto text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500"><a href="{{blog[2]}}" class="cursor-pointer hover:underline decoration-[#A2EE7F]">{{blog[0]}} | {{blog[1]}}</h2>
+            <div>
+                <h2 class="inline text-lg font-mono font-['IBM Plex Mono'] w-auto text-[#99FFD6]"><a href="/blog/{{blog[2]}}" class="cursor-pointer hover:underline decoration-[#A2EE7F]">{{blog[0]}} - {{blog[1]}}</a></h2>
             </div>
         {% endfor %}
     </div>

@@ -14,34 +14,34 @@ projects = [
 
 blogs = [
     [
-        "28-09-2023 Friday",
+        "28-09-2023",
         "I3wm Customisation tips",
-        "blogs/baseblog.html"
+        "baseblog"
     ],
     [
-        "28-09-2023 Friday",
-        "I3wm Customisation tips",
-        "blogs/baseblog.html"
+        "28-09-2023",
+        "arch tips",
+        "baseblog"
     ],
     [
-        "28-09-2023 Friday",
-        "I3wm Customisation tips",
-        "blogs/baseblog.html"
+        "28-09-2023",
+        "I3wm tips",
+        "baseblog"
     ],
     [
-        "28-09-2023 Friday",
+        "28-09-2023",
         "I3wm Customisation tips",
-        "blogs/baseblog.html"
+        "baseblog"
     ],
     [
-        "28-09-2023 Friday",
+        "28-09-2023",
         "I3wm Customisation tips",
-        "blogs/baseblog.html"
+        "baseblog"
     ],
     [
-        "28-09-2023 Friday",
+        "09-09-2023",
         "I3wm Customisation tips",
-        "blogs/baseblog.html"
+        "baseblog"
     ]
 ]
 
@@ -49,6 +49,11 @@ blogs = [
 @app.route("/")
 def index():
     return render_template('index.html', projects=projects, blogs=blogs)
+
+
+@app.route("/blog/baseblog")
+def blogpage():
+    return render_template("blogs/baseblog.html")
 
 
 if __name__ == "__main__":
