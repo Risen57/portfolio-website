@@ -4,4 +4,4 @@
 ## TODO
 - [ ]  Update README telling how I can upload blogs
 - [ ]  Socials/Contacts in footer
-- [ ]  Discord Server Link
+- [ ]  Upload first blog on how to improve as a programmer
